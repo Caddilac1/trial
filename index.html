@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GhanaMarket - Your Trusted E-Commerce & Data Bundle Store</title>
+    <link rel="stylesheet" href="static/css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-content">
+                <div class="logo">
+                    <a href="index.html">🇬🇭 GhanaMarket</a>
+                </div>
+                <div class="nav-search">
+                    <input type="text" id="searchInput" placeholder="Search products, data plans...">
+                    <button class="search-btn">🔍</button>
+                </div>
+                <div class="nav-links">
+                    <a href="index.html" class="active">Home</a>
+                    <a href="products.html?category=data">Data Plans</a>
+                    <a href="products.html?category=electronics">Electronics</a>
+                    <a href="products.html?category=ebooks">Ebooks</a>
+                    <a href="cart.html" class="cart-link">
+                        🛒 Cart <span class="cart-count">0</span>
+                    </a>
+                    <a href="login.html" class="btn-secondary">Login</a>
+                    <a href="signup.html" class="btn-primary">Sign Up</a>
+                </div>
+                <button class="mobile-menu-toggle">☰</button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Welcome to GhanaMarket</h1>
+                <p>Your one-stop shop for data bundles, electronics, and digital products</p>
+                <div class="hero-buttons">
+                    <a href="products.html?category=data" class="btn-primary">Buy Data Plans</a>
+                    <a href="products.html" class="btn-secondary">Shop All Products</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Categories Section -->
+    <section class="categories">
+        <div class="container">
+            <h2>Shop by Category</h2>
+            <div class="category-grid">
+                <a href="products.html?category=data" class="category-card">
+                    <div class="category-icon">📱</div>
+                    <h3>Data Plans</h3>
+                    <p>MTN, AirtelTigo, Telecel</p>
+                </a>
+                <a href="products.html?category=electronics" class="category-card">
+                    <div class="category-icon">💻</div>
+                    <h3>Electronics</h3>
+                    <p>Phones, Laptops, Accessories</p>
+                </a>
+                <a href="products.html?category=ebooks" class="category-card">
+                    <div class="category-icon">📚</div>
+                    <h3>Ebooks</h3>
+                    <p>Digital Books & Courses</p>
+                </a>
+                <a href="products.html?category=clothing" class="category-card">
+                    <div class="category-icon">👕</div>
+                    <h3>Clothing</h3>
+                    <p>Fashion & Apparel</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Products -->
+    <section class="featured-products">
+        <div class="container">
+            <h2>Featured Products</h2>
+            <div class="products-grid" id="featuredProducts">
+                <!-- Products will be loaded dynamically -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>GhanaMarket</h3>
+                    <p>Your trusted marketplace for data bundles and products in Ghana.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="products.html">Products</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Support</h4>
+                    <ul>
+                        <li><a href="#">Help Center</a></li>
+                        <li><a href="#">Shipping Info</a></li>
+                        <li><a href="#">Returns</a></li>
+                        <li><a href="#">FAQs</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Connect</h4>
+                    <div class="social-links">
+                        <a href="#">Facebook</a>
+                        <a href="#">Twitter</a>
+                        <a href="#">Instagram</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 GhanaMarket. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/cart.js"></script>
+</body>
+</html>
+

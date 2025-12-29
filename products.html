@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products - GhanaMarket</title>
+    <link rel="stylesheet" href="static/css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-content">
+                <div class="logo">
+                    <a href="index.html">🇬🇭 GhanaMarket</a>
+                </div>
+                <div class="nav-search">
+                    <input type="text" id="searchInput" placeholder="Search products, data plans...">
+                    <button class="search-btn">🔍</button>
+                </div>
+                <div class="nav-links">
+                    <a href="index.html">Home</a>
+                    <a href="products.html?category=data" class="active">Data Plans</a>
+                    <a href="products.html?category=electronics">Electronics</a>
+                    <a href="products.html?category=ebooks">Ebooks</a>
+                    <a href="cart.html" class="cart-link">
+                        🛒 Cart <span class="cart-count">0</span>
+                    </a>
+                    <a href="login.html" class="btn-secondary">Login</a>
+                    <a href="signup.html" class="btn-primary">Sign Up</a>
+                </div>
+                <button class="mobile-menu-toggle">☰</button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Products Section -->
+    <section class="products-page">
+        <div class="container">
+            <h1 id="pageTitle">All Products</h1>
+            
+            <!-- Filters -->
+            <div class="filters-section">
+                <h3>Filter Products</h3>
+                <div class="filters-grid">
+                    <div class="filter-group">
+                        <label for="categoryFilter">Category</label>
+                        <select id="categoryFilter">
+                            <option value="">All Categories</option>
+                            <option value="data">Data Plans</option>
+                            <option value="electronics">Electronics</option>
+                            <option value="ebooks">Ebooks</option>
+                            <option value="clothing">Clothing</option>
+                        </select>
+                    </div>
+                    <div class="filter-group" id="networkFilterGroup" style="display: none;">
+                        <label for="networkFilter">Network</label>
+                        <select id="networkFilter">
+                            <option value="">All Networks</option>
+                            <option value="mtn">MTN</option>
+                            <option value="airteltigo">AirtelTigo</option>
+                            <option value="telecel">Telecel</option>
+                        </select>
+                    </div>
+                    <div class="filter-group" id="dataSizeFilterGroup" style="display: none;">
+                        <label for="dataSizeFilter">Data Size</label>
+                        <select id="dataSizeFilter">
+                            <option value="">All Sizes</option>
+                            <option value="1">1GB</option>
+                            <option value="2">2GB</option>
+                            <option value="5">5GB</option>
+                            <option value="10">10GB</option>
+                            <option value="20">20GB</option>
+                            <option value="50">50GB+</option>
+                        </select>
+                    </div>
+                    <div class="filter-group">
+                        <label for="priceFilter">Price Range</label>
+                        <select id="priceFilter">
+                            <option value="">All Prices</option>
+                            <option value="0-50">₵0 - ₵50</option>
+                            <option value="50-100">₵50 - ₵100</option>
+                            <option value="100-200">₵100 - ₵200</option>
+                            <option value="200-500">₵200 - ₵500</option>
+                            <option value="500+">₵500+</option>
+                        </select>
+                    </div>
+                    <div class="filter-group">
+                        <label for="sortFilter">Sort By</label>
+                        <select id="sortFilter">
+                            <option value="default">Default</option>
+                            <option value="price-low">Price: Low to High</option>
+                            <option value="price-high">Price: High to Low</option>
+                            <option value="name">Name: A to Z</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Products Grid -->
+            <div class="products-grid" id="productsGrid">
+                <!-- Products will be loaded dynamically -->
+            </div>
+
+            <div id="noProducts" style="display: none; text-align: center; padding: 3rem; color: var(--text-light);">
+                <p>No products found matching your filters.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>GhanaMarket</h3>
+                    <p>Your trusted marketplace for data bundles and products in Ghana.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="products.html">Products</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Support</h4>
+                    <ul>
+                        <li><a href="#">Help Center</a></li>
+                        <li><a href="#">Shipping Info</a></li>
+                        <li><a href="#">Returns</a></li>
+                        <li><a href="#">FAQs</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Connect</h4>
+                    <div class="social-links">
+                        <a href="#">Facebook</a>
+                        <a href="#">Twitter</a>
+                        <a href="#">Instagram</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 GhanaMarket. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/products.js"></script>
+    <script src="js/cart.js"></script>
+</body>
+</html>
+

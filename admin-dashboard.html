@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard - GhanaMarket</title>
+    <link rel="stylesheet" href="static/css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-content">
+                <div class="logo">
+                    <a href="index.html">🇬🇭 GhanaMarket</a>
+                </div>
+                <div class="nav-links">
+                    <a href="admin-dashboard.html" class="active">Admin Portal</a>
+                    <a href="#" onclick="logout()" class="btn-secondary">Logout</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Admin Dashboard -->
+    <section class="dashboard">
+        <div class="container">
+            <div class="dashboard-header">
+                <h1>Admin Dashboard</h1>
+                <p>Manage your marketplace</p>
+                <div class="dashboard-nav">
+                    <a href="#overview" class="active" onclick="showAdminSection('overview')">Overview</a>
+                    <a href="#products" onclick="showAdminSection('products')">Products</a>
+                    <a href="#vendors" onclick="showAdminSection('vendors')">Vendors</a>
+                    <a href="#orders" onclick="showAdminSection('orders')">Orders</a>
+                    <a href="#users" onclick="showAdminSection('users')">Users</a>
+                    <a href="#analytics" onclick="showAdminSection('analytics')">Analytics</a>
+                </div>
+            </div>
+
+            <!-- Overview Section -->
+            <div id="overview" class="dashboard-section">
+                <h2>Platform Overview</h2>
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <h3>Total Revenue</h3>
+                        <div class="stat-value">₵245,680.00</div>
+                    </div>
+                    <div class="stat-card">
+                        <h3>Total Orders</h3>
+                        <div class="stat-value">3,456</div>
+                    </div>
+                    <div class="stat-card">
+                        <h3>Active Vendors</h3>
+                        <div class="stat-value">128</div>
+                    </div>
+                    <div class="stat-card">
+                        <h3>Total Users</h3>
+                        <div class="stat-value">5,234</div>
+                    </div>
+                </div>
+
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin-top: 2rem;">
+                    <div class="chart-container">
+                        <h3>Sales Over Time</h3>
+                        <div class="chart-placeholder">
+                            Sales chart would be displayed here
+                        </div>
+                    </div>
+                    <div class="chart-container">
+                        <h3>Orders by Category</h3>
+                        <div class="chart-placeholder">
+                            Category chart would be displayed here
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Products Section -->
+            <div id="products" class="dashboard-section" style="display: none;">
+                <h2>All Products</h2>
+                <div class="table-container">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Product ID</th>
+                                <th>Name</th>
+                                <th>Vendor</th>
+                                <th>Category</th>
+                                <th>Price</th>
+                                <th>Stock</th>
+                                <th>Status</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody id="adminProductsTable">
+                            <tr>
+                                <td>#PROD-001</td>
+                                <td>MTN 10GB Data Bundle</td>
+                                <td>DataVendor Ltd</td>
+                                <td>Data Plans</td>
+                                <td>₵45.00</td>
+                                <td>50</td>
+                                <td><span style="color: var(--ghana-green);">Active</span></td>
+                                <td>
+                                    <button class="btn-outline" style="padding: 0.5rem 1rem; font-size: 0.9rem;">Edit</button>
+                                    <button class="btn-secondary" style="padding: 0.5rem 1rem; font-size: 0.9rem; margin-left: 0.5rem;">Disable</button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Vendors Section -->
+            <div id="vendors" class="dashboard-section" style="display: none;">
+                <h2>Vendors</h2>
+                <div class="table-container">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Vendor ID</th>
+                                <th>Business Name</th>
+                                <th>Email</th>
+                                <th>Phone</th>
+                                <th>Products</th>
+                                <th>Total Sales</th>
+                                <th>Status</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody id="adminVendorsTable">
+                            <tr>
+                                <td>#VEND-001</td>
+                                <td>DataVendor Ltd</td>
+                                <td>contact@datavendor.com</td>
+                                <td>+233 XX XXX XXXX</td>
+                                <td>15</td>
+                                <td>₵12,450.00</td>
+                                <td><span style="color: var(--ghana-green);">Active</span></td>
+                                <td>
+                                    <button class="btn-outline" style="padding: 0.5rem 1rem; font-size: 0.9rem;">View</button>
+                                    <button class="btn-secondary" style="padding: 0.5rem 1rem; font-size: 0.9rem; margin-left: 0.5rem;">Suspend</button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Orders Section -->
+            <div id="orders" class="dashboard-section" style="display: none;">
+                <h2>All Orders</h2>
+                <div class="table-container">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Order ID</th>
+                                <th>Customer</th>
+                                <th>Vendor</th>
+                                <th>Product</th>
+                                <th>Amount</th>
+                                <th>Status</th>
+                                <th>Date</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody id="adminOrdersTable">
+                            <tr>
+                                <td>#ORD-001</td>
+                                <td>John Doe</td>
+                                <td>DataVendor Ltd</td>
+                                <td>MTN 10GB Data Bundle</td>
+                                <td>₵45.00</td>
+                                <td><span style="color: var(--ghana-green);">Completed</span></td>
+                                <td>2024-12-15</td>
+                                <td><a href="#" style="color: var(--primary-color);">View</a></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Users Section -->
+            <div id="users" class="dashboard-section" style="display: none;">
+                <h2>Users</h2>
+                <div class="table-container">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>User ID</th>
+                                <th>Name</th>
+                                <th>Email</th>
+                                <th>Phone</th>
+                                <th>Orders</th>
+                                <th>Status</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody id="adminUsersTable">
+                            <tr>
+                                <td>#USER-001</td>
+                                <td>John Doe</td>
+                                <td>john@example.com</td>
+                                <td>+233 XX XXX XXXX</td>
+                                <td>5</td>
+                                <td><span style="color: var(--ghana-green);">Active</span></td>
+                                <td>
+                                    <button class="btn-outline" style="padding: 0.5rem 1rem; font-size: 0.9rem;">View</button>
+                                    <button class="btn-secondary" style="padding: 0.5rem 1rem; font-size: 0.9rem; margin-left: 0.5rem;">Ban</button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Analytics Section -->
+            <div id="analytics" class="dashboard-section" style="display: none;">
+                <h2>Platform Analytics</h2>
+                <div class="chart-container">
+                    <h3>Revenue Trends</h3>
+                    <div class="chart-placeholder">
+                        Revenue trends chart would be displayed here
+                    </div>
+                </div>
+                <div class="chart-container" style="margin-top: 2rem;">
+                    <h3>Orders Over Time</h3>
+                    <div class="chart-placeholder">
+                        Orders chart would be displayed here
+                    </div>
+                </div>
+                <div class="chart-container" style="margin-top: 2rem;">
+                    <h3>Top Vendors by Sales</h3>
+                    <div class="chart-placeholder">
+                        Top vendors chart would be displayed here
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>GhanaMarket</h3>
+                    <p>Your trusted marketplace for data bundles and products in Ghana.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="products.html">Products</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Support</h4>
+                    <ul>
+                        <li><a href="#">Help Center</a></li>
+                        <li><a href="#">Shipping Info</a></li>
+                        <li><a href="#">Returns</a></li>
+                        <li><a href="#">FAQs</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Connect</h4>
+                    <div class="social-links">
+                        <a href="#">Facebook</a>
+                        <a href="#">Twitter</a>
+                        <a href="#">Instagram</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 GhanaMarket. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/admin-dashboard.js"></script>
+</body>
+</html>
+
