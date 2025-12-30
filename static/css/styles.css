@@ -934,6 +934,31 @@ table tr:last-child td {
         width: 100%;
         height: 200px;
     }
+
+    /* Homepage responsive */
+    .hero-content > div[style*="grid-template-columns"] {
+        grid-template-columns: 1fr !important;
+        gap: var(--space-8) !important;
+    }
+
+    section[style*="grid-template-columns: repeat(4"] > div {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: var(--space-6) !important;
+    }
+
+    section[style*="grid-template-columns: repeat(2"] > div {
+        grid-template-columns: 1fr !important;
+    }
+
+    section[style*="grid-template-columns: repeat(3"] > div {
+        grid-template-columns: 1fr !important;
+    }
+}
+
+@media (max-width: 480px) {
+    section[style*="grid-template-columns: repeat(4"] > div {
+        grid-template-columns: 1fr !important;
+    }
 }
 
 /* Utility Classes */
@@ -949,7 +974,7 @@ table tr:last-child td {
     margin-bottom: var(--space-4);
 }
 
-/* Remove old styles that conflict */
+/* Homepage & About Page Sections */
 .about-section,
 .how-it-works-section,
 .benefits-section {
@@ -963,6 +988,7 @@ table tr:last-child td {
     text-align: center;
     margin-bottom: var(--space-4);
     color: var(--text-primary);
+    letter-spacing: -0.02em;
 }
 
 .section-subtitle {
@@ -975,21 +1001,40 @@ table tr:last-child td {
     margin-right: auto;
 }
 
-/* Clean up old gradient styles */
-.category-card,
-.step-card,
-.benefit-card {
+/* Executive Card Styles */
+.executive-card {
     background: var(--bg-primary);
     border: 1px solid var(--border);
     border-radius: var(--radius-lg);
-    padding: var(--space-6);
+    padding: var(--space-8);
     transition: all var(--transition-base);
 }
 
-.category-card:hover,
-.step-card:hover,
-.benefit-card:hover {
+.executive-card:hover {
     border-color: var(--gray-300);
     box-shadow: var(--shadow-md);
     transform: translateY(-2px);
+}
+
+/* Clean, professional icon containers */
+.icon-container {
+    width: 48px;
+    height: 48px;
+    background: var(--bg-tertiary);
+    border-radius: var(--radius-md);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: var(--space-6);
+}
+
+.icon-container-large {
+    width: 64px;
+    height: 64px;
+    background: var(--bg-tertiary);
+    border-radius: var(--radius-lg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: var(--space-6);
 }
