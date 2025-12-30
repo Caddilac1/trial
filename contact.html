@@ -15,16 +15,25 @@
         <div class="container">
             <div class="nav-content">
                 <div class="logo">
-                    <a href="index.html">ByteMarket</a>
+                    <a href="index.html">
+                        <svg class="logo-icon" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="8" y="8" width="24" height="24" rx="4" class="logo-circle"/>
+                            <path d="M14 12H20C22.2091 12 24 13.7909 24 16C24 18.2091 22.2091 20 20 20H14V12Z" class="logo-path-primary"/>
+                            <path d="M14 20H20C22.2091 20 24 21.7909 24 24C24 26.2091 22.2091 28 20 28H14V20Z" class="logo-path-primary"/>
+                            <line x1="14" y1="12" x2="14" y2="28" stroke="var(--bg-primary)" stroke-width="2.5" stroke-linecap="round"/>
+                            <circle cx="30" cy="14" r="2" class="logo-path-accent"/>
+                        </svg>
+                        <span>ByteMarket</span>
+                    </a>
                 </div>
                 <div class="nav-links">
                     <a href="index.html">Home</a>
-                    <a href="products.html?category=data">Browse Data Bundles</a>
+                    <a href="#">Browse Data Bundles</a>
                     <a href="products.html">Shop Marketplace</a>
                     <a href="about.html">About</a>
                     <a href="contact.html" class="active">Contact</a>
                     <a href="cart.html" class="cart-link">
-                        🛒 Cart <span class="cart-count">0</span>
+                        Cart <span class="cart-count">0</span>
                     </a>
                     <a href="login.html" class="btn-secondary">Sign In</a>
                     <a href="signup.html" class="btn-primary">Sign Up</a>
@@ -35,15 +44,17 @@
     </nav>
 
     <!-- Contact Page Content -->
-    <section class="contact-section" style="padding: 4rem 0; background: var(--bg-light);">
+    <section style="padding: var(--space-16) 0; background: var(--bg-secondary);">
         <div class="container">
-            <h1 class="section-title" style="color: var(--primary-color);">Contact Us</h1>
-            <p class="section-subtitle">We're here to help. Get in touch with us through any of these channels.</p>
+            <div style="text-align: center; margin-bottom: var(--space-16);">
+                <h1 style="font-size: var(--font-4xl); font-weight: 700; margin-bottom: var(--space-4); color: var(--text-primary); letter-spacing: -0.02em;">Contact Us</h1>
+                <p style="font-size: var(--font-lg); color: var(--text-tertiary); max-width: 600px; margin: 0 auto;">We're here to help. Get in touch with us through any of these channels.</p>
+            </div>
             
-            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; margin-top: 3rem; max-width: 1000px; margin-left: auto; margin-right: auto;">
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-8); max-width: 1000px; margin: 0 auto;">
                 <!-- Contact Form -->
-                <div class="form-container" style="max-width: 100%;">
-                    <h2 style="color: var(--primary-color); margin-bottom: 1.5rem;">Send us a Message</h2>
+                <div class="form-container" style="max-width: 100%; margin: 0;">
+                    <h2 style="font-size: var(--font-xl); font-weight: 600; margin-bottom: var(--space-6); color: var(--text-primary);">Send us a Message</h2>
                     <form id="contactForm">
                         <div class="form-group">
                             <label for="contactName">Full Name</label>
@@ -66,6 +77,7 @@
                                 <option value="technical">Technical Issue</option>
                                 <option value="billing">Billing Question</option>
                                 <option value="vendor">Vendor Inquiry</option>
+                                <option value="enterprise">Enterprise Sales</option>
                                 <option value="other">Other</option>
                             </select>
                         </div>
@@ -79,32 +91,34 @@
 
                 <!-- Contact Information -->
                 <div>
-                    <div style="background: var(--bg-white); padding: 2.5rem; border-radius: 12px; box-shadow: var(--shadow); margin-bottom: 2rem;">
-                        <h2 style="color: var(--primary-color); margin-bottom: 1.5rem;">Contact Information</h2>
-                        <div class="contact-info" style="grid-template-columns: 1fr; gap: 1.5rem; margin-top: 0;">
-                            <div class="contact-item" style="padding: 0; text-align: left;">
-                                <h4 style="color: var(--accent-color); margin-bottom: 0.5rem;">Email</h4>
-                                <p style="color: var(--text-medium); margin: 0;">support@ghanamarket.com</p>
-                                <p style="color: var(--text-medium); margin: 0.5rem 0 0 0;">info@ghanamarket.com</p>
+                    <div style="background: var(--bg-primary); border: 1px solid var(--border); border-radius: var(--radius-lg); padding: var(--space-8); margin-bottom: var(--space-6);">
+                        <h2 style="font-size: var(--font-xl); font-weight: 600; margin-bottom: var(--space-6); color: var(--text-primary);">Contact Information</h2>
+                        <div style="display: flex; flex-direction: column; gap: var(--space-6);">
+                            <div>
+                                <h4 style="font-size: var(--font-xs); font-weight: 600; color: var(--text-secondary); text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: var(--space-2);">Email</h4>
+                                <p style="color: var(--text-primary); margin: 0; font-size: var(--font-sm); font-weight: 500;">support@bytemarket.com</p>
+                                <p style="color: var(--text-primary); margin: var(--space-1) 0 0 0; font-size: var(--font-sm); font-weight: 500;">info@bytemarket.com</p>
                             </div>
-                            <div class="contact-item" style="padding: 0; text-align: left;">
-                                <h4 style="color: var(--accent-color); margin-bottom: 0.5rem;">Phone</h4>
-                                <p style="color: var(--text-medium); margin: 0;">+233 XX XXX XXXX</p>
-                                <p style="color: var(--text-light); margin: 0.5rem 0 0 0; font-size: 0.9rem;">Mon-Fri: 8AM - 6PM GMT</p>
+                            <div>
+                                <h4 style="font-size: var(--font-xs); font-weight: 600; color: var(--text-secondary); text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: var(--space-2);">Phone</h4>
+                                <p style="color: var(--text-primary); margin: 0; font-size: var(--font-sm); font-weight: 500;">+233 XX XXX XXXX</p>
+                                <p style="color: var(--text-tertiary); margin: var(--space-1) 0 0 0; font-size: var(--font-xs);">Mon-Fri: 8AM - 6PM GMT</p>
                             </div>
-                            <div class="contact-item" style="padding: 0; text-align: left;">
-                                <h4 style="color: var(--accent-color); margin-bottom: 0.5rem;">Address</h4>
-                                <p style="color: var(--text-medium); margin: 0;">Accra, Greater Accra</p>
-                                <p style="color: var(--text-medium); margin: 0.5rem 0 0 0;">Ghana</p>
+                            <div>
+                                <h4 style="font-size: var(--font-xs); font-weight: 600; color: var(--text-secondary); text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: var(--space-2);">Address</h4>
+                                <p style="color: var(--text-primary); margin: 0; font-size: var(--font-sm); font-weight: 500;">Accra, Greater Accra</p>
+                                <p style="color: var(--text-primary); margin: var(--space-1) 0 0 0; font-size: var(--font-sm); font-weight: 500;">Ghana</p>
                             </div>
                         </div>
                     </div>
 
-                    <div style="background: var(--primary-color); color: white; padding: 2rem; border-radius: 12px;">
-                        <h3 style="margin-bottom: 1rem;">Business Hours</h3>
-                        <p style="margin: 0.5rem 0; opacity: 0.9;">Monday - Friday: 8:00 AM - 6:00 PM</p>
-                        <p style="margin: 0.5rem 0; opacity: 0.9;">Saturday: 9:00 AM - 2:00 PM</p>
-                        <p style="margin: 0.5rem 0; opacity: 0.9;">Sunday: Closed</p>
+                    <div style="background: var(--primary); color: var(--bg-primary); border-radius: var(--radius-lg); padding: var(--space-8);">
+                        <h3 style="font-size: var(--font-lg); font-weight: 600; margin-bottom: var(--space-4);">Business Hours</h3>
+                        <div style="display: flex; flex-direction: column; gap: var(--space-2);">
+                            <p style="margin: 0; font-size: var(--font-sm); opacity: 0.95;">Monday - Friday: 8:00 AM - 6:00 PM</p>
+                            <p style="margin: 0; font-size: var(--font-sm); opacity: 0.95;">Saturday: 9:00 AM - 2:00 PM</p>
+                            <p style="margin: 0; font-size: var(--font-sm); opacity: 0.95;">Sunday: Closed</p>
+                        </div>
                     </div>
                 </div>
             </div>

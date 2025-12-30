@@ -179,17 +179,55 @@ p {
     gap: var(--space-8);
 }
 
+.logo {
+    display: flex;
+    align-items: center;
+}
+
 .logo a {
+    display: flex;
+    align-items: center;
+    gap: var(--space-3);
     font-size: var(--font-xl);
     font-weight: 700;
     color: var(--primary);
     text-decoration: none;
     letter-spacing: -0.02em;
-    transition: color var(--transition-base);
+    transition: all var(--transition-base);
 }
 
 .logo a:hover {
     color: var(--primary-light);
+}
+
+.logo-icon {
+    width: 32px;
+    height: 32px;
+    flex-shrink: 0;
+    transition: transform var(--transition-base);
+}
+
+.logo a:hover .logo-icon {
+    transform: scale(1.05);
+}
+
+/* Logo SVG styling */
+.logo-icon {
+    width: 36px;
+    height: 36px;
+}
+
+.logo-path-primary {
+    fill: var(--primary);
+}
+
+.logo-path-accent {
+    fill: var(--accent);
+}
+
+.logo-circle {
+    fill: var(--primary);
+    opacity: 0.1;
 }
 
 .nav-links {
@@ -226,6 +264,18 @@ p {
     display: flex;
     align-items: center;
     gap: var(--space-2);
+    font-size: var(--font-sm);
+    font-weight: 500;
+    color: var(--text-secondary);
+    text-decoration: none;
+    padding: var(--space-2) var(--space-3);
+    border-radius: var(--radius);
+    transition: all var(--transition-base);
+}
+
+.cart-link:hover {
+    background: var(--bg-tertiary);
+    color: var(--primary);
 }
 
 .cart-count {
@@ -283,6 +333,18 @@ p {
 
 .btn-primary:active {
     transform: translateY(0);
+    box-shadow: var(--shadow-sm);
+}
+
+.btn-primary:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    transform: none;
+}
+
+.btn-primary:disabled:hover {
+    transform: none;
+    box-shadow: none;
 }
 
 .btn-secondary {
@@ -296,6 +358,16 @@ p {
     border-color: var(--gray-300);
     transform: translateY(-1px);
     box-shadow: var(--shadow-sm);
+}
+
+.btn-secondary:active {
+    transform: translateY(0);
+}
+
+.btn-secondary:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    transform: none;
 }
 
 .btn-outline {
@@ -367,7 +439,11 @@ p {
 .product-card:hover {
     border-color: var(--gray-300);
     box-shadow: var(--shadow-lg);
-    transform: translateY(-2px);
+    transform: translateY(-4px);
+}
+
+.product-card:active {
+    transform: translateY(-1px);
 }
 
 .product-image {
@@ -496,7 +572,30 @@ p {
     background: var(--bg-primary);
     border: 1px solid var(--border);
     border-radius: var(--radius-xl);
-    padding: var(--space-8);
+    padding: var(--space-10);
+    box-shadow: var(--shadow-sm);
+    transition: box-shadow var(--transition-base);
+}
+
+.form-container:hover {
+    box-shadow: var(--shadow-md);
+}
+
+.form-container h2 {
+    font-size: var(--font-2xl);
+    font-weight: 700;
+    margin-bottom: var(--space-2);
+    color: var(--text-primary);
+    text-align: center;
+    letter-spacing: -0.02em;
+}
+
+.form-container > p {
+    text-align: center;
+    color: var(--text-tertiary);
+    font-size: var(--font-sm);
+    margin-bottom: var(--space-8);
+    line-height: 1.6;
 }
 
 .form-group {
@@ -530,7 +629,16 @@ p {
 .form-group textarea:focus {
     outline: none;
     border-color: var(--primary);
-    box-shadow: 0 0 0 3px rgba(10, 14, 39, 0.1);
+    box-shadow: 0 0 0 3px rgba(10, 14, 39, 0.08);
+    background: var(--bg-primary);
+}
+
+.form-group input:disabled,
+.form-group textarea:disabled,
+.form-group select:disabled {
+    background: var(--bg-tertiary);
+    cursor: not-allowed;
+    opacity: 0.6;
 }
 
 .form-group textarea {
