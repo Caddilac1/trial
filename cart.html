@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shopping Cart - GhanaMarket</title>
+    <title>Shopping Cart - ByteMarket</title>
     <link rel="stylesheet" href="static/css/styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -15,21 +15,18 @@
         <div class="container">
             <div class="nav-content">
                 <div class="logo">
-                    <a href="index.html">🇬🇭 GhanaMarket</a>
-                </div>
-                <div class="nav-search">
-                    <input type="text" id="searchInput" placeholder="Search products, data plans...">
-                    <button class="search-btn">🔍</button>
+                    <a href="index.html">ByteMarket</a>
                 </div>
                 <div class="nav-links">
                     <a href="index.html">Home</a>
-                    <a href="products.html?category=data">Data Plans</a>
-                    <a href="products.html?category=electronics">Electronics</a>
-                    <a href="products.html?category=ebooks">Ebooks</a>
+                    <a href="products.html?category=data">Browse Data Bundles</a>
+                    <a href="products.html">Shop Marketplace</a>
+                    <a href="about.html">About</a>
+                    <a href="contact.html">Contact</a>
                     <a href="cart.html" class="cart-link active">
                         🛒 Cart <span class="cart-count">0</span>
                     </a>
-                    <a href="login.html" class="btn-secondary">Login</a>
+                    <a href="login.html" class="btn-secondary">Sign In</a>
                     <a href="signup.html" class="btn-primary">Sign Up</a>
                 </div>
                 <button class="mobile-menu-toggle">☰</button>
@@ -38,42 +35,47 @@
     </nav>
 
     <!-- Cart Section -->
-    <section class="cart-section">
+    <section class="cart-section" style="padding: var(--space-12) 0; background: var(--bg-secondary);">
         <div class="container">
-            <h1>Shopping Cart</h1>
+            <div style="margin-bottom: var(--space-8);">
+                <h1 style="font-size: var(--font-4xl); font-weight: 700; margin-bottom: var(--space-2); color: var(--text-primary);">Shopping Cart</h1>
+                <p style="font-size: var(--font-base); color: var(--text-tertiary);">Review your items before checkout</p>
+            </div>
             
-            <div id="cartContent">
-                <div id="cartItems">
-                    <!-- Cart items will be loaded dynamically -->
+            <div style="display: grid; grid-template-columns: 1fr 400px; gap: var(--space-8);">
+                <div id="cartContent">
+                    <div id="cartItems">
+                        <!-- Cart items will be loaded dynamically -->
+                    </div>
                 </div>
 
-                <div class="cart-summary">
-                    <h3>Order Summary</h3>
+                <div class="cart-summary" style="position: sticky; top: 88px; height: fit-content;">
+                    <h3 style="font-size: var(--font-lg); font-weight: 600; margin-bottom: var(--space-6); padding-bottom: var(--space-4); border-bottom: 1px solid var(--border);">Order Summary</h3>
                     <div class="summary-row">
-                        <span>Subtotal</span>
-                        <span id="subtotal">₵0.00</span>
+                        <span style="color: var(--text-secondary);">Subtotal</span>
+                        <span id="subtotal" style="font-weight: 600; color: var(--text-primary);">₵0.00</span>
                     </div>
                     <div class="summary-row">
-                        <span>Shipping</span>
-                        <span id="shipping">₵0.00</span>
+                        <span style="color: var(--text-secondary);">Shipping</span>
+                        <span id="shipping" style="font-weight: 600; color: var(--text-primary);">₵0.00</span>
                     </div>
                     <div class="summary-row">
-                        <span>Tax</span>
-                        <span id="tax">₵0.00</span>
+                        <span style="color: var(--text-secondary);">Tax</span>
+                        <span id="tax" style="font-weight: 600; color: var(--text-primary);">₵0.00</span>
                     </div>
                     <div class="summary-row total">
                         <span>Total</span>
                         <span id="total">₵0.00</span>
                     </div>
-                    <a href="checkout.html" class="btn-primary" style="width: 100%; text-align: center; display: block; margin-top: 1.5rem;">Proceed to Checkout</a>
-                    <a href="products.html" class="btn-outline" style="width: 100%; text-align: center; display: block; margin-top: 1rem;">Continue Shopping</a>
+                    <a href="checkout.html" class="btn-primary" style="width: 100%; text-align: center; display: block; margin-top: var(--space-6);">Proceed to Checkout</a>
+                    <a href="products.html" class="btn-outline" style="width: 100%; text-align: center; display: block; margin-top: var(--space-3);">Continue Shopping</a>
                 </div>
             </div>
 
-            <div id="emptyCart" style="display: none; text-align: center; padding: 4rem 2rem;">
-                <div style="font-size: 4rem; margin-bottom: 1rem;">🛒</div>
-                <h2>Your cart is empty</h2>
-                <p style="color: var(--text-light); margin-bottom: 2rem;">Start adding products to your cart!</p>
+            <div id="emptyCart" style="display: none; text-align: center; padding: var(--space-16); background: var(--bg-primary); border: 1px solid var(--border); border-radius: var(--radius-xl);">
+                <div style="font-size: 4rem; margin-bottom: var(--space-4); opacity: 0.3;">🛒</div>
+                <h2 style="font-size: var(--font-2xl); font-weight: 600; margin-bottom: var(--space-2);">Your cart is empty</h2>
+                <p style="color: var(--text-tertiary); margin-bottom: var(--space-6);">Start adding products to your cart!</p>
                 <a href="products.html" class="btn-primary">Browse Products</a>
             </div>
         </div>
@@ -84,7 +86,7 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-section">
-                    <h3>GhanaMarket</h3>
+                    <h3>ByteMarket</h3>
                     <p>Your trusted marketplace for data bundles and products in Ghana.</p>
                 </div>
                 <div class="footer-section">
@@ -92,7 +94,7 @@
                     <ul>
                         <li><a href="index.html">Home</a></li>
                         <li><a href="products.html">Products</a></li>
-                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="about.html">About</a></li>
                         <li><a href="contact.html">Contact</a></li>
                     </ul>
                 </div>
@@ -115,13 +117,19 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2024 GhanaMarket. All rights reserved.</p>
+                <p>&copy; 2024 ByteMarket. All rights reserved.</p>
             </div>
         </div>
     </footer>
 
     <script src="js/main.js"></script>
     <script src="js/cart.js"></script>
+    <script>
+        // Mobile menu toggle
+        document.querySelector('.mobile-menu-toggle')?.addEventListener('click', function() {
+            document.querySelector('.nav-links').classList.toggle('active');
+        });
+    </script>
 </body>
 </html>
 

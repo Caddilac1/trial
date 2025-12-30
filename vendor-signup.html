@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vendor Signup - GhanaMarket</title>
+    <title>Vendor Signup - ByteMarket</title>
     <link rel="stylesheet" href="static/css/styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -15,20 +15,18 @@
         <div class="container">
             <div class="nav-content">
                 <div class="logo">
-                    <a href="index.html">🇬🇭 GhanaMarket</a>
-                </div>
-                <div class="nav-search">
-                    <input type="text" id="searchInput" placeholder="Search products, data plans...">
-                    <button class="search-btn">🔍</button>
+                    <a href="index.html">ByteMarket</a>
                 </div>
                 <div class="nav-links">
                     <a href="index.html">Home</a>
-                    <a href="products.html?category=data">Data Plans</a>
-                    <a href="products.html?category=electronics">Electronics</a>
+                    <a href="products.html?category=data">Browse Data Bundles</a>
+                    <a href="products.html">Shop Marketplace</a>
+                    <a href="about.html">About</a>
+                    <a href="contact.html">Contact</a>
                     <a href="cart.html" class="cart-link">
                         🛒 Cart <span class="cart-count">0</span>
                     </a>
-                    <a href="login.html" class="btn-secondary">Login</a>
+                    <a href="login.html" class="btn-secondary">Sign In</a>
                     <a href="signup.html" class="btn-primary">Sign Up</a>
                 </div>
                 <button class="mobile-menu-toggle">☰</button>
@@ -42,7 +40,7 @@
             <div class="form-container">
                 <h2>Become a Vendor</h2>
                 <p style="text-align: center; color: var(--text-light); margin-bottom: 2rem;">
-                    Start selling on GhanaMarket and reach thousands of customers!
+                    Start selling on ByteMarket and reach thousands of customers!
                 </p>
 
                 <form id="vendorSignupForm">
@@ -115,15 +113,16 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-section">
-                    <h3>GhanaMarket</h3>
+                    <h3>ByteMarket</h3>
                     <p>Your trusted marketplace for data bundles and products in Ghana.</p>
                 </div>
                 <div class="footer-section">
                     <h4>Quick Links</h4>
                     <ul>
                         <li><a href="index.html">Home</a></li>
-                        <li><a href="products.html">Products</a></li>
-                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="products.html?category=data">Browse Data Bundles</a></li>
+                        <li><a href="products.html">Shop Marketplace</a></li>
+                        <li><a href="about.html">About</a></li>
                         <li><a href="contact.html">Contact</a></li>
                     </ul>
                 </div>
@@ -132,27 +131,34 @@
                     <ul>
                         <li><a href="#">Help Center</a></li>
                         <li><a href="#">Shipping Info</a></li>
-                        <li><a href="#">Returns</a></li>
+                        <li><a href="#">Returns & Refunds</a></li>
                         <li><a href="#">FAQs</a></li>
                     </ul>
                 </div>
                 <div class="footer-section">
-                    <h4>Connect</h4>
-                    <div class="social-links">
-                        <a href="#">Facebook</a>
-                        <a href="#">Twitter</a>
-                        <a href="#">Instagram</a>
-                    </div>
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Cookie Policy</a></li>
+                        <li><a href="#">Vendor Agreement</a></li>
+                    </ul>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2024 GhanaMarket. All rights reserved.</p>
+                <p>&copy; 2024 ByteMarket. All rights reserved.</p>
             </div>
         </div>
     </footer>
 
     <script src="js/main.js"></script>
     <script src="js/auth.js"></script>
+    <script>
+        // Mobile menu toggle
+        document.querySelector('.mobile-menu-toggle')?.addEventListener('click', function() {
+            document.querySelector('.nav-links').classList.toggle('active');
+        });
+    </script>
 </body>
 </html>
 

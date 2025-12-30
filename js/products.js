@@ -20,7 +20,19 @@ document.addEventListener('DOMContentLoaded', function() {
         } else if (search) {
             pageTitle.textContent = `Search Results for "${search}"`;
         } else {
-            pageTitle.textContent = 'All Products';
+            pageTitle.textContent = 'Marketplace Products';
+        }
+    }
+    
+    // If no category parameter, exclude data bundles (show only marketplace products)
+    if (!category && !search) {
+        const categoryFilter = document.getElementById('categoryFilter');
+        if (categoryFilter) {
+            // Filter out data category from the dropdown when showing marketplace
+            const dataOption = categoryFilter.querySelector('option[value="data"]');
+            if (dataOption) {
+                dataOption.style.display = 'none';
+            }
         }
     }
 
@@ -90,8 +102,14 @@ function filterProducts() {
     }
 
     // Category filter
+    const urlParams2 = new URLSearchParams(window.location.search);
+    const categoryParam = urlParams2.get('category');
+    
     if (categoryFilter && categoryFilter.value) {
         filteredProducts = filteredProducts.filter(p => p.category === categoryFilter.value);
+    } else if (!categoryParam && !search) {
+        // If no category parameter and no search, exclude data bundles (show only marketplace products)
+        filteredProducts = filteredProducts.filter(p => p.category !== 'data');
     }
 
     // Network filter (for data plans)

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sign Up - GhanaMarket</title>
+    <title>Sign Up - ByteMarket</title>
     <link rel="stylesheet" href="static/css/styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -15,21 +15,18 @@
         <div class="container">
             <div class="nav-content">
                 <div class="logo">
-                    <a href="index.html">🇬🇭 GhanaMarket</a>
-                </div>
-                <div class="nav-search">
-                    <input type="text" id="searchInput" placeholder="Search products, data plans...">
-                    <button class="search-btn">🔍</button>
+                    <a href="index.html">ByteMarket</a>
                 </div>
                 <div class="nav-links">
                     <a href="index.html">Home</a>
-                    <a href="products.html?category=data">Data Plans</a>
-                    <a href="products.html?category=electronics">Electronics</a>
-                    <a href="products.html?category=ebooks">Ebooks</a>
+                    <a href="products.html?category=data">Browse Data Bundles</a>
+                    <a href="products.html">Shop Marketplace</a>
+                    <a href="about.html">About</a>
+                    <a href="contact.html">Contact</a>
                     <a href="cart.html" class="cart-link">
                         🛒 Cart <span class="cart-count">0</span>
                     </a>
-                    <a href="login.html" class="btn-secondary">Login</a>
+                    <a href="login.html" class="btn-secondary">Sign In</a>
                     <a href="signup.html" class="btn-primary active">Sign Up</a>
                 </div>
                 <button class="mobile-menu-toggle">☰</button>
@@ -43,7 +40,7 @@
             <div class="form-container">
                 <h2>Create Your Account</h2>
                 <p style="text-align: center; color: var(--text-light); margin-bottom: 2rem;">
-                    Join GhanaMarket today and start shopping!
+                    Join ByteMarket today and start shopping!
                 </p>
 
                 <button class="oauth-button" onclick="handleGoogleSignup()">
@@ -95,7 +92,7 @@
 
                 <div style="margin-top: 2rem; padding-top: 2rem; border-top: 1px solid var(--border-color);">
                     <p style="text-align: center; color: var(--text-light); margin-bottom: 1rem;">
-                        Want to sell on GhanaMarket?
+                        Want to sell on ByteMarket?
                     </p>
                     <a href="vendor-signup.html" class="btn-outline" style="width: 100%; text-align: center; display: block;">Become a Vendor</a>
                 </div>
@@ -108,7 +105,7 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-section">
-                    <h3>GhanaMarket</h3>
+                    <h3>ByteMarket</h3>
                     <p>Your trusted marketplace for data bundles and products in Ghana.</p>
                 </div>
                 <div class="footer-section">
@@ -116,7 +113,7 @@
                     <ul>
                         <li><a href="index.html">Home</a></li>
                         <li><a href="products.html">Products</a></li>
-                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="about.html">About</a></li>
                         <li><a href="contact.html">Contact</a></li>
                     </ul>
                 </div>
@@ -139,13 +136,19 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2024 GhanaMarket. All rights reserved.</p>
+                <p>&copy; 2024 ByteMarket. All rights reserved.</p>
             </div>
         </div>
     </footer>
 
     <script src="js/main.js"></script>
     <script src="js/auth.js"></script>
+    <script>
+        // Mobile menu toggle
+        document.querySelector('.mobile-menu-toggle')?.addEventListener('click', function() {
+            document.querySelector('.nav-links').classList.toggle('active');
+        });
+    </script>
 </body>
 </html>
 

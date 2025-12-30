@@ -1,29 +1,29 @@
-// Main JavaScript for GhanaMarket
+// Main JavaScript for ByteMarket
 
 // Sample product data
 const products = [
-    // Data Plans
-    { id: 1, name: 'MTN 1GB Data Bundle', category: 'data', network: 'mtn', dataSize: 1, validity: 30, price: 8.00, description: 'MTN 1GB data bundle valid for 30 days. Instant delivery.', image: 'https://via.placeholder.com/300x200?text=MTN+1GB', stock: 100 },
-    { id: 2, name: 'MTN 5GB Data Bundle', category: 'data', network: 'mtn', dataSize: 5, validity: 30, price: 35.00, description: 'MTN 5GB data bundle valid for 30 days. Instant delivery.', image: 'https://via.placeholder.com/300x200?text=MTN+5GB', stock: 100 },
-    { id: 3, name: 'MTN 10GB Data Bundle', category: 'data', network: 'mtn', dataSize: 10, validity: 30, price: 45.00, description: 'MTN 10GB data bundle valid for 30 days. Instant delivery.', image: 'https://via.placeholder.com/300x200?text=MTN+10GB', stock: 100 },
-    { id: 4, name: 'AirtelTigo 2GB Data Bundle', category: 'data', network: 'airteltigo', dataSize: 2, validity: 30, price: 15.00, description: 'AirtelTigo 2GB data bundle valid for 30 days. Instant delivery.', image: 'https://via.placeholder.com/300x200?text=AirtelTigo+2GB', stock: 100 },
-    { id: 5, name: 'AirtelTigo 10GB Data Bundle', category: 'data', network: 'airteltigo', dataSize: 10, validity: 30, price: 42.00, description: 'AirtelTigo 10GB data bundle valid for 30 days. Instant delivery.', image: 'https://via.placeholder.com/300x200?text=AirtelTigo+10GB', stock: 100 },
-    { id: 6, name: 'Telecel 5GB Data Bundle', category: 'data', network: 'telecel', dataSize: 5, validity: 30, price: 33.00, description: 'Telecel 5GB data bundle valid for 30 days. Instant delivery.', image: 'https://via.placeholder.com/300x200?text=Telecel+5GB', stock: 100 },
+    // Data Plans - Using gradient backgrounds for better visuals
+    { id: 1, name: 'MTN 1GB Data Bundle', category: 'data', network: 'mtn', dataSize: 1, validity: 30, price: 8.00, description: 'MTN 1GB data bundle valid for 30 days. Instant delivery.', image: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400&h=300&fit=crop', stock: 100 },
+    { id: 2, name: 'MTN 5GB Data Bundle', category: 'data', network: 'mtn', dataSize: 5, validity: 30, price: 35.00, description: 'MTN 5GB data bundle valid for 30 days. Instant delivery.', image: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400&h=300&fit=crop', stock: 100 },
+    { id: 3, name: 'MTN 10GB Data Bundle', category: 'data', network: 'mtn', dataSize: 10, validity: 30, price: 45.00, description: 'MTN 10GB data bundle valid for 30 days. Instant delivery.', image: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400&h=300&fit=crop', stock: 100 },
+    { id: 4, name: 'AirtelTigo 2GB Data Bundle', category: 'data', network: 'airteltigo', dataSize: 2, validity: 30, price: 15.00, description: 'AirtelTigo 2GB data bundle valid for 30 days. Instant delivery.', image: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400&h=300&fit=crop', stock: 100 },
+    { id: 5, name: 'AirtelTigo 10GB Data Bundle', category: 'data', network: 'airteltigo', dataSize: 10, validity: 30, price: 42.00, description: 'AirtelTigo 10GB data bundle valid for 30 days. Instant delivery.', image: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400&h=300&fit=crop', stock: 100 },
+    { id: 6, name: 'Telecel 5GB Data Bundle', category: 'data', network: 'telecel', dataSize: 5, validity: 30, price: 33.00, description: 'Telecel 5GB data bundle valid for 30 days. Instant delivery.', image: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400&h=300&fit=crop', stock: 100 },
     
     // Electronics
-    { id: 7, name: 'Samsung Galaxy A54', category: 'electronics', price: 2500.00, description: 'Latest Samsung smartphone with 128GB storage, 6GB RAM, and 50MP camera.', image: 'https://via.placeholder.com/300x200?text=Samsung+Galaxy', stock: 15 },
-    { id: 8, name: 'iPhone 13 Case', category: 'electronics', price: 120.00, description: 'Premium protective case for iPhone 13. Available in multiple colors.', image: 'https://via.placeholder.com/300x200?text=iPhone+Case', stock: 50 },
-    { id: 9, name: 'Wireless Earbuds', category: 'electronics', price: 180.00, description: 'High-quality wireless earbuds with noise cancellation and 20-hour battery life.', image: 'https://via.placeholder.com/300x200?text=Wireless+Earbuds', stock: 30 },
-    { id: 10, name: 'Laptop Stand', category: 'electronics', price: 95.00, description: 'Ergonomic aluminum laptop stand for better posture and cooling.', image: 'https://via.placeholder.com/300x200?text=Laptop+Stand', stock: 25 },
+    { id: 7, name: 'Samsung Galaxy A54', category: 'electronics', price: 2500.00, description: 'Latest Samsung smartphone with 128GB storage, 6GB RAM, and 50MP camera.', image: 'https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=400&h=300&fit=crop', stock: 15 },
+    { id: 8, name: 'iPhone 13 Case', category: 'electronics', price: 120.00, description: 'Premium protective case for iPhone 13. Available in multiple colors.', image: 'https://images.unsplash.com/photo-1601972602237-8c79241f8df0?w=400&h=300&fit=crop', stock: 50 },
+    { id: 9, name: 'Wireless Earbuds', category: 'electronics', price: 180.00, description: 'High-quality wireless earbuds with noise cancellation and 20-hour battery life.', image: 'https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=400&h=300&fit=crop', stock: 30 },
+    { id: 10, name: 'Laptop Stand', category: 'electronics', price: 95.00, description: 'Ergonomic aluminum laptop stand for better posture and cooling.', image: 'https://images.unsplash.com/photo-1527864550417-7fd91fc51a46?w=400&h=300&fit=crop', stock: 25 },
     
     // Ebooks
-    { id: 11, name: 'Ghana History Ebook', category: 'ebooks', price: 25.00, description: 'Comprehensive guide to Ghanaian history from pre-colonial times to present.', image: 'https://via.placeholder.com/300x200?text=Ghana+History', stock: 999 },
-    { id: 12, name: 'Business Success Guide', category: 'ebooks', price: 35.00, description: 'Complete guide to starting and growing a business in Ghana.', image: 'https://via.placeholder.com/300x200?text=Business+Guide', stock: 999 },
-    { id: 13, name: 'Web Development Course', category: 'ebooks', price: 150.00, description: 'Learn modern web development with HTML, CSS, JavaScript, and React.', image: 'https://via.placeholder.com/300x200?text=Web+Dev+Course', stock: 999 },
+    { id: 11, name: 'Ghana History Ebook', category: 'ebooks', price: 25.00, description: 'Comprehensive guide to Ghanaian history from pre-colonial times to present.', image: 'https://images.unsplash.com/photo-1544947950-fa07a98d237f?w=400&h=300&fit=crop', stock: 999 },
+    { id: 12, name: 'Business Success Guide', category: 'ebooks', price: 35.00, description: 'Complete guide to starting and growing a business in Ghana.', image: 'https://images.unsplash.com/photo-1544947950-fa07a98d237f?w=400&h=300&fit=crop', stock: 999 },
+    { id: 13, name: 'Web Development Course', category: 'ebooks', price: 150.00, description: 'Learn modern web development with HTML, CSS, JavaScript, and React.', image: 'https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=400&h=300&fit=crop', stock: 999 },
     
     // Clothing
-    { id: 14, name: 'Kente Print Shirt', category: 'clothing', price: 85.00, description: 'Authentic Ghanaian Kente print shirt. Available in various sizes.', image: 'https://via.placeholder.com/300x200?text=Kente+Shirt', stock: 40 },
-    { id: 15, name: 'Traditional Kaftan', category: 'clothing', price: 120.00, description: 'Elegant traditional kaftan perfect for special occasions.', image: 'https://via.placeholder.com/300x200?text=Kaftan', stock: 30 }
+    { id: 14, name: 'Kente Print Shirt', category: 'clothing', price: 85.00, description: 'Authentic Ghanaian Kente print shirt. Available in various sizes.', image: 'https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=400&h=300&fit=crop', stock: 40 },
+    { id: 15, name: 'Traditional Kaftan', category: 'clothing', price: 120.00, description: 'Elegant traditional kaftan perfect for special occasions.', image: 'https://images.unsplash.com/photo-1594633312681-425a7b4cc6b7?w=400&h=300&fit=crop', stock: 30 }
 ];
 
 // Initialize on page load

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Product Details - ByteMarket</title>
+    <title>About Us - ByteMarket</title>
     <link rel="stylesheet" href="static/css/styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -21,7 +21,7 @@
                     <a href="index.html">Home</a>
                     <a href="products.html?category=data">Browse Data Bundles</a>
                     <a href="products.html">Shop Marketplace</a>
-                    <a href="about.html">About</a>
+                    <a href="about.html" class="active">About</a>
                     <a href="contact.html">Contact</a>
                     <a href="cart.html" class="cart-link">
                         🛒 Cart <span class="cart-count">0</span>
@@ -34,11 +34,50 @@
         </div>
     </nav>
 
-    <!-- Product Detail Section -->
-    <section class="product-detail" style="padding: var(--space-12) 0; background: var(--bg-secondary);">
+    <!-- About Page Content -->
+    <section class="about-section" style="padding: 4rem 0;">
         <div class="container">
-            <div id="productDetailContent" style="background: var(--bg-primary); border: 1px solid var(--border); border-radius: var(--radius-xl); padding: var(--space-8);">
-                <!-- Product details will be loaded dynamically -->
+            <h1 class="section-title">About ByteMarket</h1>
+            <div style="max-width: 900px; margin: 0 auto;">
+                <div class="about-content" style="text-align: left; margin-bottom: 3rem;">
+                    <h2 style="color: var(--primary-color); margin-bottom: 1.5rem; font-size: 2rem;">Our Mission</h2>
+                    <p>ByteMarket was founded with a clear vision: to create a unified, efficient, and trustworthy platform that serves the diverse needs of Ghanaian businesses and consumers. We combine the convenience of instant telecom data bundle purchases with a comprehensive e-commerce marketplace, all in one seamless experience.</p>
+                </div>
+
+                <div class="about-content" style="text-align: left; margin-bottom: 3rem;">
+                    <h2 style="color: var(--primary-color); margin-bottom: 1.5rem; font-size: 2rem;">What We Offer</h2>
+                    <div style="display: grid; gap: 1.5rem;">
+                        <div style="padding: 1.5rem; background: var(--bg-light); border-radius: 8px; border-left: 4px solid var(--primary-color);">
+                            <h3 style="color: var(--primary-color); margin-bottom: 0.5rem;">Telecom Data Bundles</h3>
+                            <p style="color: var(--text-medium); margin: 0;">Instant delivery of data bundles for MTN, AirtelTigo, and Telecel networks. Perfect for businesses and individuals who need reliable, fast data connectivity.</p>
+                        </div>
+                        <div style="padding: 1.5rem; background: var(--bg-light); border-radius: 8px; border-left: 4px solid var(--accent-color);">
+                            <h3 style="color: var(--primary-color); margin-bottom: 0.5rem;">E-Commerce Marketplace</h3>
+                            <p style="color: var(--text-medium); margin: 0;">A wide range of products including electronics, accessories, tools, ebooks, and more. All from verified vendors with quality assurance.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="about-content" style="text-align: left; margin-bottom: 3rem;">
+                    <h2 style="color: var(--primary-color); margin-bottom: 1.5rem; font-size: 2rem;">Our Values</h2>
+                    <div class="benefits-grid">
+                        <div class="benefit-card">
+                            <div class="benefit-icon">🔒</div>
+                            <h3>Security First</h3>
+                            <p>We implement industry-leading security measures to protect your data and transactions.</p>
+                        </div>
+                        <div class="benefit-card">
+                            <div class="benefit-icon">⚡</div>
+                            <h3>Efficiency</h3>
+                            <p>Streamlined processes ensure quick transactions and fast delivery times.</p>
+                        </div>
+                        <div class="benefit-card">
+                            <div class="benefit-icon">🤝</div>
+                            <h3>Trust</h3>
+                            <p>We build lasting relationships with our customers through transparency and reliability.</p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -87,7 +126,6 @@
     </footer>
 
     <script src="js/main.js"></script>
-    <script src="js/product-detail.js"></script>
     <script src="js/cart.js"></script>
     <script>
         // Mobile menu toggle

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Admin Dashboard - GhanaMarket</title>
+    <title>Admin Dashboard - ByteMarket</title>
     <link rel="stylesheet" href="static/css/styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -15,9 +15,14 @@
         <div class="container">
             <div class="nav-content">
                 <div class="logo">
-                    <a href="index.html">🇬🇭 GhanaMarket</a>
+                    <a href="index.html">ByteMarket</a>
                 </div>
                 <div class="nav-links">
+                    <a href="index.html">Home</a>
+                    <a href="products.html?category=data">Browse Data Bundles</a>
+                    <a href="products.html">Shop Marketplace</a>
+                    <a href="about.html">About</a>
+                    <a href="contact.html">Contact</a>
                     <a href="admin-dashboard.html" class="active">Admin Portal</a>
                     <a href="#" onclick="logout()" class="btn-secondary">Logout</a>
                 </div>
@@ -43,37 +48,41 @@
 
             <!-- Overview Section -->
             <div id="overview" class="dashboard-section">
-                <h2>Platform Overview</h2>
+                <h2 style="font-size: var(--font-xl); font-weight: 600; margin-bottom: var(--space-6); padding-bottom: var(--space-4); border-bottom: 1px solid var(--border);">Platform Overview</h2>
                 <div class="stats-grid">
                     <div class="stat-card">
                         <h3>Total Revenue</h3>
                         <div class="stat-value">₵245,680.00</div>
+                        <div class="stat-change" style="color: var(--accent-green);">+12.5% from last month</div>
                     </div>
                     <div class="stat-card">
                         <h3>Total Orders</h3>
                         <div class="stat-value">3,456</div>
+                        <div class="stat-change" style="color: var(--accent-green);">+8.2% from last month</div>
                     </div>
                     <div class="stat-card">
                         <h3>Active Vendors</h3>
                         <div class="stat-value">128</div>
+                        <div class="stat-change" style="color: var(--accent-green);">+5 new this month</div>
                     </div>
                     <div class="stat-card">
                         <h3>Total Users</h3>
                         <div class="stat-value">5,234</div>
+                        <div class="stat-change" style="color: var(--accent-green);">+234 this month</div>
                     </div>
                 </div>
 
-                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin-top: 2rem;">
-                    <div class="chart-container">
-                        <h3>Sales Over Time</h3>
-                        <div class="chart-placeholder">
-                            Sales chart would be displayed here
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-6); margin-top: var(--space-8);">
+                    <div class="dashboard-section" style="margin: 0;">
+                        <h3 style="font-size: var(--font-lg); font-weight: 600; margin-bottom: var(--space-4);">Sales Over Time</h3>
+                        <div style="height: 300px; background: var(--bg-tertiary); border-radius: var(--radius-lg); display: flex; align-items: center; justify-content: center; color: var(--text-muted); font-size: var(--font-sm);">
+                            Chart visualization
                         </div>
                     </div>
-                    <div class="chart-container">
-                        <h3>Orders by Category</h3>
-                        <div class="chart-placeholder">
-                            Category chart would be displayed here
+                    <div class="dashboard-section" style="margin: 0;">
+                        <h3 style="font-size: var(--font-lg); font-weight: 600; margin-bottom: var(--space-4);">Orders by Category</h3>
+                        <div style="height: 300px; background: var(--bg-tertiary); border-radius: var(--radius-lg); display: flex; align-items: center; justify-content: center; color: var(--text-muted); font-size: var(--font-sm);">
+                            Chart visualization
                         </div>
                     </div>
                 </div>
@@ -81,7 +90,10 @@
 
             <!-- Products Section -->
             <div id="products" class="dashboard-section" style="display: none;">
-                <h2>All Products</h2>
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: var(--space-6); padding-bottom: var(--space-4); border-bottom: 1px solid var(--border);">
+                    <h2 style="font-size: var(--font-xl); font-weight: 600; margin: 0;">All Products</h2>
+                    <button class="btn-primary" style="font-size: var(--font-sm);">Add Product</button>
+                </div>
                 <div class="table-container">
                     <table>
                         <thead>
@@ -248,15 +260,16 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-section">
-                    <h3>GhanaMarket</h3>
+                    <h3>ByteMarket</h3>
                     <p>Your trusted marketplace for data bundles and products in Ghana.</p>
                 </div>
                 <div class="footer-section">
                     <h4>Quick Links</h4>
                     <ul>
                         <li><a href="index.html">Home</a></li>
-                        <li><a href="products.html">Products</a></li>
-                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="products.html?category=data">Browse Data Bundles</a></li>
+                        <li><a href="products.html">Shop Marketplace</a></li>
+                        <li><a href="about.html">About</a></li>
                         <li><a href="contact.html">Contact</a></li>
                     </ul>
                 </div>
@@ -265,27 +278,34 @@
                     <ul>
                         <li><a href="#">Help Center</a></li>
                         <li><a href="#">Shipping Info</a></li>
-                        <li><a href="#">Returns</a></li>
+                        <li><a href="#">Returns & Refunds</a></li>
                         <li><a href="#">FAQs</a></li>
                     </ul>
                 </div>
                 <div class="footer-section">
-                    <h4>Connect</h4>
-                    <div class="social-links">
-                        <a href="#">Facebook</a>
-                        <a href="#">Twitter</a>
-                        <a href="#">Instagram</a>
-                    </div>
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Cookie Policy</a></li>
+                        <li><a href="#">Vendor Agreement</a></li>
+                    </ul>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2024 GhanaMarket. All rights reserved.</p>
+                <p>&copy; 2024 ByteMarket. All rights reserved.</p>
             </div>
         </div>
     </footer>
 
     <script src="js/main.js"></script>
     <script src="js/admin-dashboard.js"></script>
+    <script>
+        // Mobile menu toggle
+        document.querySelector('.mobile-menu-toggle')?.addEventListener('click', function() {
+            document.querySelector('.nav-links').classList.toggle('active');
+        });
+    </script>
 </body>
 </html>
 

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Checkout - GhanaMarket</title>
+    <title>Checkout - ByteMarket</title>
     <link rel="stylesheet" href="static/css/styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -16,21 +16,18 @@
         <div class="container">
             <div class="nav-content">
                 <div class="logo">
-                    <a href="index.html">🇬🇭 GhanaMarket</a>
-                </div>
-                <div class="nav-search">
-                    <input type="text" id="searchInput" placeholder="Search products, data plans...">
-                    <button class="search-btn">🔍</button>
+                    <a href="index.html">ByteMarket</a>
                 </div>
                 <div class="nav-links">
                     <a href="index.html">Home</a>
-                    <a href="products.html?category=data">Data Plans</a>
-                    <a href="products.html?category=electronics">Electronics</a>
-                    <a href="products.html?category=ebooks">Ebooks</a>
+                    <a href="products.html?category=data">Browse Data Bundles</a>
+                    <a href="products.html">Shop Marketplace</a>
+                    <a href="about.html">About</a>
+                    <a href="contact.html">Contact</a>
                     <a href="cart.html" class="cart-link">
                         🛒 Cart <span class="cart-count">0</span>
                     </a>
-                    <a href="login.html" class="btn-secondary">Login</a>
+                    <a href="login.html" class="btn-secondary">Sign In</a>
                     <a href="signup.html" class="btn-primary">Sign Up</a>
                 </div>
                 <button class="mobile-menu-toggle">☰</button>
@@ -39,22 +36,25 @@
     </nav>
 
     <!-- Checkout Section -->
-    <section class="checkout-section">
+    <section class="checkout-section" style="padding: var(--space-12) 0; background: var(--bg-secondary);">
         <div class="container">
-            <h1>Checkout</h1>
+            <div style="margin-bottom: var(--space-8);">
+                <h1 style="font-size: var(--font-4xl); font-weight: 700; margin-bottom: var(--space-2); color: var(--text-primary);">Checkout</h1>
+                <p style="font-size: var(--font-base); color: var(--text-tertiary);">Complete your purchase securely</p>
+            </div>
 
             <!-- Progress Steps -->
-            <div class="checkout-steps">
+            <div class="checkout-steps" style="margin-bottom: var(--space-12);">
                 <div class="checkout-step active">1</div>
                 <div class="checkout-step">2</div>
                 <div class="checkout-step">3</div>
             </div>
 
-            <div style="display: grid; grid-template-columns: 2fr 1fr; gap: 2rem; margin-top: 2rem;">
+            <div style="display: grid; grid-template-columns: 2fr 1fr; gap: var(--space-8);">
                 <!-- Checkout Form -->
                 <div>
                     <div class="dashboard-section">
-                        <h2>Shipping Information</h2>
+                        <h2 style="font-size: var(--font-xl); font-weight: 600; margin-bottom: var(--space-6); padding-bottom: var(--space-4); border-bottom: 1px solid var(--border);">Shipping Information</h2>
                         <form id="checkoutForm">
                             <div class="form-group">
                                 <label for="fullName">Full Name</label>
@@ -72,7 +72,7 @@
                                 <label for="address">Delivery Address</label>
                                 <input type="text" id="address" name="address" required>
                             </div>
-                            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+                            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-4);">
                                 <div class="form-group">
                                     <label for="city">City</label>
                                     <input type="text" id="city" name="city" required>
@@ -97,16 +97,16 @@
                         </form>
                     </div>
 
-                    <div class="dashboard-section" style="margin-top: 2rem;">
-                        <h2>Payment Method</h2>
+                    <div class="dashboard-section" style="margin-top: var(--space-6);">
+                        <h2 style="font-size: var(--font-xl); font-weight: 600; margin-bottom: var(--space-6); padding-bottom: var(--space-4); border-bottom: 1px solid var(--border);">Payment Method</h2>
                         <div class="form-group">
-                            <label style="display: flex; align-items: center; padding: 1rem; border: 2px solid var(--border-color); border-radius: 8px; cursor: pointer; margin-bottom: 1rem;">
-                                <input type="radio" name="paymentMethod" value="card" checked style="width: auto; margin-right: 1rem;">
-                                <span>💳 Credit/Debit Card</span>
+                            <label style="display: flex; align-items: center; padding: var(--space-4); border: 1px solid var(--border); border-radius: var(--radius-md); cursor: pointer; margin-bottom: var(--space-3); transition: all var(--transition-base);">
+                                <input type="radio" name="paymentMethod" value="card" checked style="width: auto; margin-right: var(--space-3);">
+                                <span style="font-size: var(--font-sm); font-weight: 500;">Credit/Debit Card</span>
                             </label>
-                            <label style="display: flex; align-items: center; padding: 1rem; border: 2px solid var(--border-color); border-radius: 8px; cursor: pointer;">
-                                <input type="radio" name="paymentMethod" value="mobile" style="width: auto; margin-right: 1rem;">
-                                <span>📱 Mobile Money (MTN/AirtelTigo/Vodafone)</span>
+                            <label style="display: flex; align-items: center; padding: var(--space-4); border: 1px solid var(--border); border-radius: var(--radius-md); cursor: pointer; transition: all var(--transition-base);">
+                                <input type="radio" name="paymentMethod" value="mobile" style="width: auto; margin-right: var(--space-3);">
+                                <span style="font-size: var(--font-sm); font-weight: 500;">Mobile Money (MTN/AirtelTigo/Vodafone)</span>
                             </label>
                         </div>
                     </div>
@@ -114,28 +114,28 @@
 
                 <!-- Order Summary -->
                 <div>
-                    <div class="cart-summary">
-                        <h3>Order Summary</h3>
-                        <div id="checkoutItems">
+                    <div class="cart-summary" style="position: sticky; top: 88px; height: fit-content;">
+                        <h3 style="font-size: var(--font-lg); font-weight: 600; margin-bottom: var(--space-6); padding-bottom: var(--space-4); border-bottom: 1px solid var(--border);">Order Summary</h3>
+                        <div id="checkoutItems" style="margin-bottom: var(--space-4);">
                             <!-- Items will be loaded from cart -->
                         </div>
                         <div class="summary-row">
-                            <span>Subtotal</span>
-                            <span id="subtotal">₵0.00</span>
+                            <span style="color: var(--text-secondary);">Subtotal</span>
+                            <span id="subtotal" style="font-weight: 600; color: var(--text-primary);">₵0.00</span>
                         </div>
                         <div class="summary-row">
-                            <span>Shipping</span>
-                            <span id="shipping">₵0.00</span>
+                            <span style="color: var(--text-secondary);">Shipping</span>
+                            <span id="shipping" style="font-weight: 600; color: var(--text-primary);">₵0.00</span>
                         </div>
                         <div class="summary-row">
-                            <span>Tax</span>
-                            <span id="tax">₵0.00</span>
+                            <span style="color: var(--text-secondary);">Tax</span>
+                            <span id="tax" style="font-weight: 600; color: var(--text-primary);">₵0.00</span>
                         </div>
                         <div class="summary-row total">
                             <span>Total</span>
                             <span id="total">₵0.00</span>
                         </div>
-                        <button type="button" id="payButton" class="btn-primary" style="width: 100%; margin-top: 1.5rem;">Pay with Paystack</button>
+                        <button type="button" id="payButton" class="btn-primary" style="width: 100%; margin-top: var(--space-6);">Pay with Paystack</button>
                     </div>
                 </div>
             </div>
@@ -147,7 +147,7 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-section">
-                    <h3>GhanaMarket</h3>
+                    <h3>ByteMarket</h3>
                     <p>Your trusted marketplace for data bundles and products in Ghana.</p>
                 </div>
                 <div class="footer-section">
@@ -155,7 +155,7 @@
                     <ul>
                         <li><a href="index.html">Home</a></li>
                         <li><a href="products.html">Products</a></li>
-                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="about.html">About</a></li>
                         <li><a href="contact.html">Contact</a></li>
                     </ul>
                 </div>
@@ -178,7 +178,7 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2024 GhanaMarket. All rights reserved.</p>
+                <p>&copy; 2024 ByteMarket. All rights reserved.</p>
             </div>
         </div>
     </footer>
@@ -186,6 +186,12 @@
     <script src="js/main.js"></script>
     <script src="js/cart.js"></script>
     <script src="js/checkout.js"></script>
+    <script>
+        // Mobile menu toggle
+        document.querySelector('.mobile-menu-toggle')?.addEventListener('click', function() {
+            document.querySelector('.nav-links').classList.toggle('active');
+        });
+    </script>
 </body>
 </html>
 

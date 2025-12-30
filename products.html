@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Products - GhanaMarket</title>
+    <title>Products - ByteMarket</title>
     <link rel="stylesheet" href="static/css/styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -15,21 +15,18 @@
         <div class="container">
             <div class="nav-content">
                 <div class="logo">
-                    <a href="index.html">🇬🇭 GhanaMarket</a>
-                </div>
-                <div class="nav-search">
-                    <input type="text" id="searchInput" placeholder="Search products, data plans...">
-                    <button class="search-btn">🔍</button>
+                    <a href="index.html">ByteMarket</a>
                 </div>
                 <div class="nav-links">
                     <a href="index.html">Home</a>
-                    <a href="products.html?category=data" class="active">Data Plans</a>
-                    <a href="products.html?category=electronics">Electronics</a>
-                    <a href="products.html?category=ebooks">Ebooks</a>
+                    <a href="products.html?category=data">Browse Data Bundles</a>
+                    <a href="products.html" class="active">Shop Marketplace</a>
+                    <a href="about.html">About</a>
+                    <a href="contact.html">Contact</a>
                     <a href="cart.html" class="cart-link">
                         🛒 Cart <span class="cart-count">0</span>
                     </a>
-                    <a href="login.html" class="btn-secondary">Login</a>
+                    <a href="login.html" class="btn-secondary">Sign In</a>
                     <a href="signup.html" class="btn-primary">Sign Up</a>
                 </div>
                 <button class="mobile-menu-toggle">☰</button>
@@ -38,19 +35,21 @@
     </nav>
 
     <!-- Products Section -->
-    <section class="products-page">
+    <section class="products-page" style="padding: var(--space-12) 0; background: var(--bg-secondary);">
         <div class="container">
-            <h1 id="pageTitle">All Products</h1>
+            <div style="margin-bottom: var(--space-8);">
+                <h1 id="pageTitle" style="font-size: var(--font-4xl); font-weight: 700; margin-bottom: var(--space-2); color: var(--text-primary);">Marketplace Products</h1>
+                <p style="font-size: var(--font-base); color: var(--text-tertiary);">Browse our curated selection of premium products</p>
+            </div>
             
             <!-- Filters -->
             <div class="filters-section">
-                <h3>Filter Products</h3>
+                <h3 style="font-size: var(--font-lg); font-weight: 600; margin-bottom: var(--space-6); color: var(--text-primary);">Filters</h3>
                 <div class="filters-grid">
                     <div class="filter-group">
                         <label for="categoryFilter">Category</label>
                         <select id="categoryFilter">
                             <option value="">All Categories</option>
-                            <option value="data">Data Plans</option>
                             <option value="electronics">Electronics</option>
                             <option value="ebooks">Ebooks</option>
                             <option value="clothing">Clothing</option>
@@ -105,8 +104,8 @@
                 <!-- Products will be loaded dynamically -->
             </div>
 
-            <div id="noProducts" style="display: none; text-align: center; padding: 3rem; color: var(--text-light);">
-                <p>No products found matching your filters.</p>
+            <div id="noProducts" style="display: none; text-align: center; padding: var(--space-12); background: var(--bg-primary); border: 1px solid var(--border); border-radius: var(--radius-lg);">
+                <p style="font-size: var(--font-base); color: var(--text-tertiary);">No products found matching your filters.</p>
             </div>
         </div>
     </section>
@@ -116,7 +115,7 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-section">
-                    <h3>GhanaMarket</h3>
+                    <h3>ByteMarket</h3>
                     <p>Your trusted marketplace for data bundles and products in Ghana.</p>
                 </div>
                 <div class="footer-section">
@@ -124,7 +123,7 @@
                     <ul>
                         <li><a href="index.html">Home</a></li>
                         <li><a href="products.html">Products</a></li>
-                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="about.html">About</a></li>
                         <li><a href="contact.html">Contact</a></li>
                     </ul>
                 </div>
@@ -147,7 +146,7 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2024 GhanaMarket. All rights reserved.</p>
+                <p>&copy; 2024 ByteMarket. All rights reserved.</p>
             </div>
         </div>
     </footer>
@@ -155,6 +154,12 @@
     <script src="js/main.js"></script>
     <script src="js/products.js"></script>
     <script src="js/cart.js"></script>
+    <script>
+        // Mobile menu toggle
+        document.querySelector('.mobile-menu-toggle')?.addEventListener('click', function() {
+            document.querySelector('.nav-links').classList.toggle('active');
+        });
+    </script>
 </body>
 </html>
 
